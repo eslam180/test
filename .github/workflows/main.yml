@@ -18,6 +18,12 @@ jobs:
        run: docker login --username ${{ secretS.DOCKER_USERNAME }} --password ${{ secretS.DOCKER_PASSWORD }} 
 
 
+      - name: "building docker image"
+        run: docker build -t  ${{ secretS.DOCKER_USERNAME }}/image
+      - name: "pushing to docker hup"
+        run: docker push ${{ secretS.DOCKER_USERNAME }}/image
+
+
    
       
 
