@@ -15,15 +15,15 @@ jobs:
      - uses: actions/checkout@v3
 
      - name: "login to docker hup"
-       run: docker login --username eslamcoder77 --password dckr_pat_AW0rkO8M0kX2plJSVgp3tIxsKos 
+       run: docker login username ${{ secrets.USERNAME }} --password ${{ secrets.PASSWORD }}
 
 
       - name: "building docker image"
-        run: docker build -t eslamcoder77/myimage .
+        run: docker build -t ${{ secrets.USERNAME }}/myimage .
 
       - name: "pushing to docker hup"
-        run: docker push eslamcoder77/myimage 
-        run: echo e
+        run: docker push ${{ secrets.USERNAME }}/myimage 
+        
 
 
      
