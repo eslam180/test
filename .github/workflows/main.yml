@@ -1,1 +1,18 @@
+on:
+  push:
+    branches:
+      - master
 
+
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 'testing githup action'
+        run: pwd
+
+      - name: 'teting printing'
+        run: echo eslam
