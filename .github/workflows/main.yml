@@ -11,18 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: 'testing githup action'
-        run: pwd
 
-      - name: before 
-        run: ls 
+     - uses: actions/checkout@v3
 
-
-      - uses: actions/checkout@v3
+     - name: "login to doker hup"
+       run: docker login --uername eslamcoder77 --password docker login -u eslamcoder77
 
 
-      - name: after 
-        run: ls
+   
       
 
             
