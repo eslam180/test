@@ -12,21 +12,20 @@ jobs:
     
     steps:
 
-    
+     - uses: actions/checkout@v3
 
      - name: "login to docker hup"
-       run: docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_PASSWORD }} 
+       run: docker login --username ${{ secrets.USERNAME }} --password ${{ secrets.PASSWORD }} 
 
 
       - name: "building docker image"
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/myimage .
+        run: docker build -t ${{ secrets.USERNAME }}/myimage .
 
       - name: "pushing to docker hup"
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/myimage 
+        run: docker push ${{ secrets.USERNAME }}/myimage 
 
 
-        - name: "test"
-          run: echo eslam
+     
 
 
    
