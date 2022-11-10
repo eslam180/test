@@ -23,6 +23,7 @@ jobs:
 
       - name: "pushing to docker hup"
         run: docker push eslamcoder77/myimage 
+        run: echo e
 
 
      
