@@ -19,7 +19,7 @@ jobs:
 
 
       - name: "building docker image"
-        run: docker build -t  ${{ secretS.DOCKER_USERNAME }}/image .
+        run: docker build -t ${{ secretS.DOCKER_USERNAME }}/image .
       - name: "pushing to docker hup"
         run: docker push ${{ secretS.DOCKER_USERNAME }}/image
 
